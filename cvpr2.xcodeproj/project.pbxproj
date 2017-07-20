@@ -1,0 +1,488 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F63964141F1804950008D8A5 /* BlueToothConnect.m in Sources */ = {isa = PBXBuildFile; fileRef = F63964131F1804950008D8A5 /* BlueToothConnect.m */; };
+		F63E66F61F14B18A00E9496A /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = F63E66F51F14B18A00E9496A /* main.mm */; };
+		F63E66F91F14B18A00E9496A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = F63E66F81F14B18A00E9496A /* AppDelegate.mm */; };
+		F63E67011F14B18A00E9496A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F63E67001F14B18A00E9496A /* Assets.xcassets */; };
+		F63E670F1F14B1FA00E9496A /* ActionViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F63E670C1F14B1FA00E9496A /* ActionViewController.mm */; };
+		F63E67101F14B1FA00E9496A /* IndexViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F63E670E1F14B1FA00E9496A /* IndexViewController.mm */; };
+		F63E67161F14B21400E9496A /* cube.png in Resources */ = {isa = PBXBuildFile; fileRef = F63E67141F14B21400E9496A /* cube.png */; };
+		F63E671B1F14B33900E9496A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F63E671A1F14B33900E9496A /* Default-568h@2x.png */; };
+		F6A05E491F168F3900B9BEF1 /* GyroData.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A05E401F168F3900B9BEF1 /* GyroData.m */; };
+		F6A05E4A1F168F3900B9BEF1 /* IMUMeasurement.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A05E421F168F3900B9BEF1 /* IMUMeasurement.m */; };
+		F6A05E4B1F168F3900B9BEF1 /* Interpolator.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A05E441F168F3900B9BEF1 /* Interpolator.m */; };
+		F6A05E4C1F168F3900B9BEF1 /* LinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A05E461F168F3900B9BEF1 /* LinkedList.m */; };
+		F6A05E4D1F168F3900B9BEF1 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A05E481F168F3900B9BEF1 /* Node.m */; };
+		F6A05E501F168F8700B9BEF1 /* AccelData.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A05E4F1F168F8700B9BEF1 /* AccelData.m */; };
+		F6A05E561F17513400B9BEF1 /* FramePacket.mm in Sources */ = {isa = PBXBuildFile; fileRef = F6A05E551F17513400B9BEF1 /* FramePacket.mm */; };
+		F6A272331F1AA2DA002C4046 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6A272321F1AA2DA002C4046 /* CoreMedia.framework */; };
+		F6A2724E1F1BEEA0002C4046 /* Final_Pokemon_Diffuse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F6A2724D1F1BEEA0002C4046 /* Final_Pokemon_Diffuse.jpg */; };
+		F6A272681F1C8080002C4046 /* KairyuDh.png in Resources */ = {isa = PBXBuildFile; fileRef = F6A272671F1C8080002C4046 /* KairyuDh.png */; };
+		F6A2726A1F1C8378002C4046 /* KairyuEyeDh.png in Resources */ = {isa = PBXBuildFile; fileRef = F6A272691F1C8377002C4046 /* KairyuEyeDh.png */; };
+		F6A272DA1F213805002C4046 /* iTongCVPR_2017.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6A272D91F213805002C4046 /* iTongCVPR_2017.a */; };
+		F6B4A6431F19E68E007AC8A4 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B4A6421F19E68E007AC8A4 /* Accelerate.framework */; };
+		F6B4A65A1F1A9FD1007AC8A4 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B4A6591F1A9FD1007AC8A4 /* CoreMotion.framework */; };
+		F6B4A65C1F1A9FE3007AC8A4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B4A65B1F1A9FE3007AC8A4 /* AVFoundation.framework */; };
+		F6B4A65E1F1AA01F007AC8A4 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B4A65D1F1AA01F007AC8A4 /* GLKit.framework */; };
+		F6B4A6601F1AA0B0007AC8A4 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B4A65F1F1AA0B0007AC8A4 /* AssetsLibrary.framework */; };
+		F6B4A6621F1AA0D3007AC8A4 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B4A6611F1AA0D3007AC8A4 /* OpenGLES.framework */; };
+		F6FE7A391F15C383000F1F69 /* MapViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F6FE7A381F15C383000F1F69 /* MapViewController.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F63964121F1804950008D8A5 /* BlueToothConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueToothConnect.h; sourceTree = "<group>"; };
+		F63964131F1804950008D8A5 /* BlueToothConnect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueToothConnect.m; sourceTree = "<group>"; };
+		F63E66F11F14B18A00E9496A /* cvpr2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cvpr2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F63E66F51F14B18A00E9496A /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		F63E66F71F14B18A00E9496A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F63E66F81F14B18A00E9496A /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		F63E67001F14B18A00E9496A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F63E67051F14B18A00E9496A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F63E670B1F14B1FA00E9496A /* ActionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionViewController.h; sourceTree = "<group>"; };
+		F63E670C1F14B1FA00E9496A /* ActionViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ActionViewController.mm; sourceTree = "<group>"; };
+		F63E670D1F14B1FA00E9496A /* IndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexViewController.h; sourceTree = "<group>"; };
+		F63E670E1F14B1FA00E9496A /* IndexViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IndexViewController.mm; sourceTree = "<group>"; };
+		F63E67141F14B21400E9496A /* cube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cube.png; sourceTree = "<group>"; };
+		F63E671A1F14B33900E9496A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F6A05E3F1F168F3900B9BEF1 /* GyroData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GyroData.h; sourceTree = "<group>"; };
+		F6A05E401F168F3900B9BEF1 /* GyroData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GyroData.m; sourceTree = "<group>"; };
+		F6A05E411F168F3900B9BEF1 /* IMUMeasurement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMUMeasurement.h; sourceTree = "<group>"; };
+		F6A05E421F168F3900B9BEF1 /* IMUMeasurement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMUMeasurement.m; sourceTree = "<group>"; };
+		F6A05E431F168F3900B9BEF1 /* Interpolator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Interpolator.h; sourceTree = "<group>"; };
+		F6A05E441F168F3900B9BEF1 /* Interpolator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Interpolator.m; sourceTree = "<group>"; };
+		F6A05E451F168F3900B9BEF1 /* LinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedList.h; sourceTree = "<group>"; };
+		F6A05E461F168F3900B9BEF1 /* LinkedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedList.m; sourceTree = "<group>"; };
+		F6A05E471F168F3900B9BEF1 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		F6A05E481F168F3900B9BEF1 /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
+		F6A05E4E1F168F8700B9BEF1 /* AccelData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccelData.h; sourceTree = "<group>"; };
+		F6A05E4F1F168F8700B9BEF1 /* AccelData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccelData.m; sourceTree = "<group>"; };
+		F6A05E541F17513400B9BEF1 /* FramePacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FramePacket.h; sourceTree = "<group>"; };
+		F6A05E551F17513400B9BEF1 /* FramePacket.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FramePacket.mm; sourceTree = "<group>"; };
+		F6A272321F1AA2DA002C4046 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		F6A272471F1BE50E002C4046 /* cube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cube.h; sourceTree = "<group>"; };
+		F6A2724C1F1BEE85002C4046 /* PokemonB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PokemonB.h; sourceTree = "<group>"; };
+		F6A2724D1F1BEEA0002C4046 /* Final_Pokemon_Diffuse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Final_Pokemon_Diffuse.jpg; sourceTree = "<group>"; };
+		F6A272651F1C7CD1002C4046 /* Dragonite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dragonite.h; sourceTree = "<group>"; };
+		F6A272671F1C8080002C4046 /* KairyuDh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KairyuDh.png; sourceTree = "<group>"; };
+		F6A272691F1C8377002C4046 /* KairyuEyeDh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KairyuEyeDh.png; sourceTree = "<group>"; };
+		F6A272D91F213805002C4046 /* iTongCVPR_2017.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = iTongCVPR_2017.a; sourceTree = "<group>"; };
+		F6B4A6421F19E68E007AC8A4 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		F6B4A6591F1A9FD1007AC8A4 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		F6B4A65B1F1A9FE3007AC8A4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F6B4A65D1F1AA01F007AC8A4 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		F6B4A65F1F1AA0B0007AC8A4 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		F6B4A6611F1AA0D3007AC8A4 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		F6D9FDD81F1967E6008143EE /* tong_cvpr_2017.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tong_cvpr_2017.h; sourceTree = "<group>"; };
+		F6FE7A371F15C383000F1F69 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		F6FE7A381F15C383000F1F69 /* MapViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MapViewController.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F63E66EE1F14B18A00E9496A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6A272331F1AA2DA002C4046 /* CoreMedia.framework in Frameworks */,
+				F6B4A6621F1AA0D3007AC8A4 /* OpenGLES.framework in Frameworks */,
+				F6B4A6601F1AA0B0007AC8A4 /* AssetsLibrary.framework in Frameworks */,
+				F6B4A65E1F1AA01F007AC8A4 /* GLKit.framework in Frameworks */,
+				F6A272DA1F213805002C4046 /* iTongCVPR_2017.a in Frameworks */,
+				F6B4A65C1F1A9FE3007AC8A4 /* AVFoundation.framework in Frameworks */,
+				F6B4A65A1F1A9FD1007AC8A4 /* CoreMotion.framework in Frameworks */,
+				F6B4A6431F19E68E007AC8A4 /* Accelerate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F63E66E81F14B18A00E9496A = {
+			isa = PBXGroup;
+			children = (
+				F63E671A1F14B33900E9496A /* Default-568h@2x.png */,
+				F63E66F31F14B18A00E9496A /* cvpr2 */,
+				F63E66F21F14B18A00E9496A /* Products */,
+				F6B4A6411F19E68E007AC8A4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F63E66F21F14B18A00E9496A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F63E66F11F14B18A00E9496A /* cvpr2.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F63E66F31F14B18A00E9496A /* cvpr2 */ = {
+			isa = PBXGroup;
+			children = (
+				F6D9FDD41F189782008143EE /* Tong */,
+				F6A05E3E1F168E9800B9BEF1 /* Controllers */,
+				F6A05E3D1F168E9000B9BEF1 /* Models */,
+				F63E67111F14B21400E9496A /* Resources */,
+				F63E67001F14B18A00E9496A /* Assets.xcassets */,
+				F63E67051F14B18A00E9496A /* Info.plist */,
+				F63E66F41F14B18A00E9496A /* Supporting Files */,
+			);
+			path = cvpr2;
+			sourceTree = "<group>";
+		};
+		F63E66F41F14B18A00E9496A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F63E66F71F14B18A00E9496A /* AppDelegate.h */,
+				F63E66F81F14B18A00E9496A /* AppDelegate.mm */,
+				F63E66F51F14B18A00E9496A /* main.mm */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F63E67111F14B21400E9496A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F6A272691F1C8377002C4046 /* KairyuEyeDh.png */,
+				F6A272671F1C8080002C4046 /* KairyuDh.png */,
+				F6A272651F1C7CD1002C4046 /* Dragonite.h */,
+				F6A2724C1F1BEE85002C4046 /* PokemonB.h */,
+				F6A2724D1F1BEEA0002C4046 /* Final_Pokemon_Diffuse.jpg */,
+				F6A272471F1BE50E002C4046 /* cube.h */,
+				F63E67141F14B21400E9496A /* cube.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F6A05E3D1F168E9000B9BEF1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F6A05E4E1F168F8700B9BEF1 /* AccelData.h */,
+				F6A05E4F1F168F8700B9BEF1 /* AccelData.m */,
+				F6A05E3F1F168F3900B9BEF1 /* GyroData.h */,
+				F6A05E401F168F3900B9BEF1 /* GyroData.m */,
+				F6A05E411F168F3900B9BEF1 /* IMUMeasurement.h */,
+				F6A05E421F168F3900B9BEF1 /* IMUMeasurement.m */,
+				F6A05E431F168F3900B9BEF1 /* Interpolator.h */,
+				F6A05E441F168F3900B9BEF1 /* Interpolator.m */,
+				F6A05E451F168F3900B9BEF1 /* LinkedList.h */,
+				F6A05E461F168F3900B9BEF1 /* LinkedList.m */,
+				F6A05E471F168F3900B9BEF1 /* Node.h */,
+				F6A05E481F168F3900B9BEF1 /* Node.m */,
+				F6A05E541F17513400B9BEF1 /* FramePacket.h */,
+				F6A05E551F17513400B9BEF1 /* FramePacket.mm */,
+				F63964121F1804950008D8A5 /* BlueToothConnect.h */,
+				F63964131F1804950008D8A5 /* BlueToothConnect.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		F6A05E3E1F168E9800B9BEF1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F63E670B1F14B1FA00E9496A /* ActionViewController.h */,
+				F63E670C1F14B1FA00E9496A /* ActionViewController.mm */,
+				F63E670D1F14B1FA00E9496A /* IndexViewController.h */,
+				F63E670E1F14B1FA00E9496A /* IndexViewController.mm */,
+				F6FE7A371F15C383000F1F69 /* MapViewController.h */,
+				F6FE7A381F15C383000F1F69 /* MapViewController.mm */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		F6B4A6411F19E68E007AC8A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6A272D91F213805002C4046 /* iTongCVPR_2017.a */,
+				F6A272321F1AA2DA002C4046 /* CoreMedia.framework */,
+				F6B4A6611F1AA0D3007AC8A4 /* OpenGLES.framework */,
+				F6B4A65F1F1AA0B0007AC8A4 /* AssetsLibrary.framework */,
+				F6B4A65D1F1AA01F007AC8A4 /* GLKit.framework */,
+				F6B4A65B1F1A9FE3007AC8A4 /* AVFoundation.framework */,
+				F6B4A6591F1A9FD1007AC8A4 /* CoreMotion.framework */,
+				F6B4A6421F19E68E007AC8A4 /* Accelerate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F6D9FDD41F189782008143EE /* Tong */ = {
+			isa = PBXGroup;
+			children = (
+				F6D9FDD81F1967E6008143EE /* tong_cvpr_2017.h */,
+			);
+			name = Tong;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F63E66F01F14B18A00E9496A /* cvpr2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F63E67081F14B18A00E9496A /* Build configuration list for PBXNativeTarget "cvpr2" */;
+			buildPhases = (
+				F63E66ED1F14B18A00E9496A /* Sources */,
+				F63E66EE1F14B18A00E9496A /* Frameworks */,
+				F63E66EF1F14B18A00E9496A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cvpr2;
+			productName = cvpr2;
+			productReference = F63E66F11F14B18A00E9496A /* cvpr2.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F63E66E91F14B18A00E9496A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = christophercobar;
+				TargetAttributes = {
+					F63E66F01F14B18A00E9496A = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = LW76959M9R;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F63E66EC1F14B18A00E9496A /* Build configuration list for PBXProject "cvpr2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F63E66E81F14B18A00E9496A;
+			productRefGroup = F63E66F21F14B18A00E9496A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F63E66F01F14B18A00E9496A /* cvpr2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F63E66EF1F14B18A00E9496A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6A2726A1F1C8378002C4046 /* KairyuEyeDh.png in Resources */,
+				F6A272681F1C8080002C4046 /* KairyuDh.png in Resources */,
+				F63E67011F14B18A00E9496A /* Assets.xcassets in Resources */,
+				F63E67161F14B21400E9496A /* cube.png in Resources */,
+				F63E671B1F14B33900E9496A /* Default-568h@2x.png in Resources */,
+				F6A2724E1F1BEEA0002C4046 /* Final_Pokemon_Diffuse.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F63E66ED1F14B18A00E9496A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6A05E4D1F168F3900B9BEF1 /* Node.m in Sources */,
+				F6A05E561F17513400B9BEF1 /* FramePacket.mm in Sources */,
+				F63E66F91F14B18A00E9496A /* AppDelegate.mm in Sources */,
+				F6A05E491F168F3900B9BEF1 /* GyroData.m in Sources */,
+				F63E670F1F14B1FA00E9496A /* ActionViewController.mm in Sources */,
+				F6A05E4A1F168F3900B9BEF1 /* IMUMeasurement.m in Sources */,
+				F6FE7A391F15C383000F1F69 /* MapViewController.mm in Sources */,
+				F63E66F61F14B18A00E9496A /* main.mm in Sources */,
+				F6A05E501F168F8700B9BEF1 /* AccelData.m in Sources */,
+				F63E67101F14B1FA00E9496A /* IndexViewController.mm in Sources */,
+				F6A05E4C1F168F3900B9BEF1 /* LinkedList.m in Sources */,
+				F6A05E4B1F168F3900B9BEF1 /* Interpolator.m in Sources */,
+				F63964141F1804950008D8A5 /* BlueToothConnect.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F63E67061F14B18A00E9496A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				"HEADER_SEARCH_PATHS[arch=*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
+				VALID_ARCHS = arm64;
+			};
+			name = Debug;
+		};
+		F63E67071F14B18A00E9496A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = arm64;
+			};
+			name = Release;
+		};
+		F63E67091F14B18A00E9496A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LW76959M9R;
+				"HEADER_SEARCH_PATHS[arch=*]" = "";
+				INFOPLIST_FILE = cvpr2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/cvpr2",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.christophercobar.cvpr2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F63E670A1F14B18A00E9496A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LW76959M9R;
+				INFOPLIST_FILE = cvpr2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/cvpr2",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.christophercobar.cvpr2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F63E66EC1F14B18A00E9496A /* Build configuration list for PBXProject "cvpr2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F63E67061F14B18A00E9496A /* Debug */,
+				F63E67071F14B18A00E9496A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F63E67081F14B18A00E9496A /* Build configuration list for PBXNativeTarget "cvpr2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F63E67091F14B18A00E9496A /* Debug */,
+				F63E670A1F14B18A00E9496A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F63E66E91F14B18A00E9496A /* Project object */;
+}
