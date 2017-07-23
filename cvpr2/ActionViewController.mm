@@ -329,20 +329,21 @@ using namespace std;
 - (void)update {
 
 //    _transformPose = _recentTranspose;
-    if (_tEngine->_isMapConstructed) {
+    if (_tEngine) {
         
         if (_currentFrmae && _isComputing) {
             NSDate *start = [NSDate date];
-            std::vector<double> updatedPose = _tEngine->computePose(_currentFrmae, 480, 640);
+            //std::vector<double> updatedPose = _tEngine->computePose(_currentFrmae, 480, 640);
+            std::vector<double> updatedPose = _tEngine->computePoseFromQR(_currentFrmae, 480, 640);
             NSDate *end = [NSDate date];
             NSTimeInterval time = [end timeIntervalSinceDate:start];
             NSLog(@"execution time: %f", time);
             if (updatedPose.size() != 0) {
                 // update pose
-//                NSLog(@"Proposed pose R: [%f %f %f; %f %f %f; %f %f %f]", updatedPose[0], updatedPose[1], updatedPose[2],
-//                updatedPose[3], updatedPose[4], updatedPose[5],
-//                updatedPose[6], updatedPose[7], updatedPose[8]);
-//                NSLog(@"Proposed pose t: [%f %f %f]", updatedPose[9], updatedPose[10], updatedPose[11]);
+                NSLog(@"Proposed pose R: [%f %f %f; %f %f %f; %f %f %f]", updatedPose[0], updatedPose[1], updatedPose[2],
+                updatedPose[3], updatedPose[4], updatedPose[5],
+                updatedPose[6], updatedPose[7], updatedPose[8]);
+                NSLog(@"Proposed pose t: [%f %f %f]", updatedPose[9], updatedPose[10], updatedPose[11]);
         
                 _transformPose = GLKMatrix4MakeAndTranspose(updatedPose[0], updatedPose[1], updatedPose[2], updatedPose[9], updatedPose[3], updatedPose[4], updatedPose[5], updatedPose[10], updatedPose[6], updatedPose[7], updatedPose[8], updatedPose[11], 0.0, 0.0, 0.0, 1.0);
                 

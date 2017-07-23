@@ -28,6 +28,10 @@ public:
                                     int imgHeight,
                                     int imgWidth);
     
+    std::vector<double> computePoseFromQR(unsigned char* frame,
+                                          int imgHeight,
+                                          int imgWidth);
+    
     bool isEngineInitialized();
     
     int getLandmarkCount();
