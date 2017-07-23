@@ -303,12 +303,12 @@ using namespace std;
     //    glClear(GL_COLOR_BUFFER_BIT);
 //    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-//    if (NSStringFromGLKMatrix4(_transformPose) == NSStringFromGLKMatrix4(_zeroMatrix)) {
-//        return;
-//    }
-    if ((_frameCounter % 5) == 0) {
+    if (NSStringFromGLKMatrix4(_transformPose) == NSStringFromGLKMatrix4(_zeroMatrix)) {
         return;
     }
+    //if ((_frameCounter % 5) == 0) {
+    //    return;
+    //}
     
     [_glkBaseEff prepareToDraw];
     // Set matrices
@@ -348,7 +348,7 @@ using namespace std;
                 _transformPose = GLKMatrix4MakeAndTranspose(updatedPose[0], updatedPose[1], updatedPose[2], updatedPose[9], updatedPose[3], updatedPose[4], updatedPose[5], updatedPose[10], updatedPose[6], updatedPose[7], updatedPose[8], updatedPose[11], 0.0, 0.0, 0.0, 1.0);
                 
             } else {
-//                _transformPose = GLKMatrix4Make(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+                _transformPose = GLKMatrix4Make(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
             }
         }
     }
