@@ -9,9 +9,12 @@
 #import "IndexViewController.h"
 #import "ActionViewController.h"
 #import "MapViewController.h"
+#import "AppDelegate.h"
 
 @interface IndexViewController () {
     
+    AppDelegate *_ADel;
+
 }
 
 @end
@@ -22,9 +25,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-//    if (!_tEngine) {
-//        _tEngine = new Tong_CVPR_2017();
-//    }
+    _ADel = _ADel = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    
+    if (!_tEngine) {
+        std::string sDocString = std::string([_ADel.docsPath UTF8String]);
+        _tEngine = new Tong_CVPR_2017(sDocString);
+    }
     
     self.view.backgroundColor = [UIColor grayColor];
     
@@ -63,11 +69,11 @@
     buttonStack.spacing = 50;
     buttonStack.translatesAutoresizingMaskIntoConstraints = false;
     
-    [self.view addSubview:buttonStack];
-    [buttonStack.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = true;
-    [buttonStack.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:self.view.frame.size.height*-0.1].active = true;
-    [buttonStack.widthAnchor constraintEqualToAnchor:self.view.widthAnchor multiplier:0.6].active = true;
-    [buttonStack.heightAnchor constraintEqualToAnchor:self.view.heightAnchor multiplier:0.2].active = true;
+   // [self.view addSubview:buttonStack];
+  //  [buttonStack.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = true;
+   // [buttonStack.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:self.view.frame.size.height*-0.1].active = true;
+   // [buttonStack.widthAnchor constraintEqualToAnchor:self.view.widthAnchor multiplier:0.6].active = true;
+   // [buttonStack.heightAnchor constraintEqualToAnchor:self.view.heightAnchor multiplier:0.2].active = true;
     
     // Start button
     _startButton = [[UIButton alloc] init];
@@ -94,6 +100,22 @@
     
     [buttonStack addArrangedSubview:_startButton];
     [buttonStack addArrangedSubview:mapButton];
+    
+    UIButton *newStartButton = [[UIButton alloc] init];
+    [newStartButton setTitle:@"Start" forState:UIControlStateNormal];
+    [newStartButton addTarget:self action:@selector(newStartButtonPressed:)
+        forControlEvents:UIControlEventTouchUpInside];
+    newStartButton.translatesAutoresizingMaskIntoConstraints = false;
+    newStartButton.titleLabel.textAlignment = NSTextAlignmentCenter;
+    newStartButton.tintColor = [UIColor whiteColor];
+    newStartButton.backgroundColor = [UIColor blueColor];
+    
+    [self.view addSubview:newStartButton];
+    [newStartButton.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = true;
+    [newStartButton.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:self.view.frame.size.height*-0.1].active = true;
+    [newStartButton.widthAnchor constraintEqualToAnchor:self.view.widthAnchor multiplier:0.6].active = true;
+    [newStartButton.heightAnchor constraintEqualToAnchor:self.view.heightAnchor multiplier:0.2].active = true;
+    
 }
 
 
@@ -106,6 +128,18 @@
         NSLog(@"Error: AR attempted without map.");
         return;
     }
+    
+    vc.tEngine = _tEngine;
+    [self.navigationController pushViewController:vc animated:true];
+}
+
+- (void)newStartButtonPressed:(UIButton *)button {
+    ActionViewController *vc = [[ActionViewController alloc] initWithNibName:nil bundle:nil];
+    if (!_tEngine) {
+        NSLog(@"Error: AR attempted without map.");
+        return;
+    }
+    
     vc.tEngine = _tEngine;
     [self.navigationController pushViewController:vc animated:true];
 }
