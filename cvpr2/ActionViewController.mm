@@ -32,6 +32,11 @@ using namespace std;
     
     int missedFrames;
     
+    float _x_scale;
+    float _y_scale;
+    float _z_scale;
+    
+    double t;
 }
 
 @end
@@ -40,6 +45,12 @@ using namespace std;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //t = 7.0;
+    
+    _x_scale = (7/5) * (300/508.58591);
+    _y_scale = (4.5/5) * (240/508.63043);
+    _z_scale = 1.0;
     
     int missedFrames = 0;
     
@@ -56,7 +67,7 @@ using namespace std;
     
     _transformPose = GLKMatrix4Identity;
     _centerPose = GLKMatrix4Identity;
-    _centerPose = GLKMatrix4Translate(_centerPose, centerPoint[0], centerPoint[1], centerPoint[2]);
+    //_centerPose = GLKMatrix4Translate(_centerPose, centerPoint[0], centerPoint[1], centerPoint[2]);
     _zeroMatrix = GLKMatrix4Make(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
     _isComputing = true;
     _frameCounter = 0;
@@ -317,7 +328,7 @@ using namespace std;
     */
     
     if (missedFrames >= 15) {
-        return;
+        //return;
     }
     
     [_glkBaseEff prepareToDraw];
@@ -384,11 +395,11 @@ using namespace std;
     _glkBaseEff.transform.projectionMatrix = projectionMatrix;
     
     // ModelView Matrix
-//    NSLog(@"center: %f %f %f %f", _centerPose.m30, _centerPose.m31, _centerPose.m32, _centerPose.m33);
+    //NSLog(@"center: %f %f %f %f", _centerPose.m30, _centerPose.m31, _centerPose.m32, _centerPose.m33);
     
     GLKMatrix4 modelViewMatrix = _centerPose; // fixed to center currently
     
-    modelViewMatrix = GLKMatrix4Scale(modelViewMatrix, 0.75, 0.75, 0.75);
+    //modelViewMatrix = GLKMatrix4Scale(modelViewMatrix, 0.75, 0.75, 0.75);
 
     GLKMatrix4 rotX = GLKMatrix4Make(1, 0, 0, 0,
                                      0, -1, 0, 0,
@@ -397,7 +408,9 @@ using namespace std;
     
     //GLKMatrix3 rotation_t = GLKMatrix3Transpose(GLKMatrix4GetMatrix3(_transformPose));
     GLKMatrix3 rotation_t = GLKMatrix3(GLKMatrix4GetMatrix3(_transformPose));
-    GLKVector3 translation = GLKVector3MultiplyScalar(GLKVector3Make(_transformPose.m30, _transformPose.m31, _transformPose.m32), 1.37);
+    GLKVector3 translation = GLKVector3Make(_transformPose.m30 * _x_scale,
+                                            _transformPose.m31 * _y_scale,
+                                            _transformPose.m32 * _z_scale);
 
     GLKMatrix4 transform = GLKMatrix4Make(rotation_t.m00, rotation_t.m01, rotation_t.m02, 0,
                                           rotation_t.m10, rotation_t.m11, rotation_t.m12, 0,
@@ -415,6 +428,14 @@ using namespace std;
     modelViewMatrix = GLKMatrix4Multiply(rotX, modelViewMatrix);
      
 //    NSLog(@"result: %@", NSStringFromGLKMatrix4(modelViewMatrix));
+    
+    
+    // ModelView Matrix
+    /*
+    GLKMatrix4 modelViewMatrix = GLKMatrix4Identity;
+    modelViewMatrix = GLKMatrix4Translate(modelViewMatrix, 0.0f, 4.5f, -5.0f);
+    modelViewMatrix = GLKMatrix4RotateX(modelViewMatrix, GLKMathDegreesToRadians(45.0f));
+    */
     
     _glkBaseEff.transform.modelviewMatrix = modelViewMatrix;
 }
