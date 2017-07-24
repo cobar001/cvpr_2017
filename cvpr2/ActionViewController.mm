@@ -29,6 +29,9 @@ using namespace std;
     unsigned char* _currentFrmae;
     
     AppDelegate *_ADel;
+    
+    int missedFrames;
+    
 }
 
 @end
@@ -37,6 +40,8 @@ using namespace std;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    int missedFrames = 0;
     
     NSLog(@"landmarks: %d", _tEngine->getLandmarkCount());
     std::vector<double> centerPoint = _tEngine->getPlaneCenterPoint();
@@ -230,7 +235,8 @@ using namespace std;
     // disable AF
     if ([device isFocusModeSupported:AVCaptureFocusModeLocked]) {
         [device lockForConfiguration:&error];
-        device.focusMode = AVCaptureFocusModeLocked;
+        //device.focusMode = AVCaptureFocusModeLocked;
+        device.focusMode = AVCaptureFocusModeAutoFocus;
         [device unlockForConfiguration];
     }
     
@@ -292,6 +298,7 @@ using namespace std;
 - (void)cleanUp {
     _isComputing = false;
     [_videoCaptureSession stopRunning];
+    missedFrames= 0;
 }
 
 /***
@@ -303,12 +310,15 @@ using namespace std;
     //    glClear(GL_COLOR_BUFFER_BIT);
 //    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+    /*
     if (NSStringFromGLKMatrix4(_transformPose) == NSStringFromGLKMatrix4(_zeroMatrix)) {
         return;
     }
-    //if ((_frameCounter % 5) == 0) {
-    //    return;
-    //}
+    */
+    
+    if (missedFrames >= 15) {
+        return;
+    }
     
     [_glkBaseEff prepareToDraw];
     // Set matrices
@@ -339,6 +349,7 @@ using namespace std;
             NSTimeInterval time = [end timeIntervalSinceDate:start];
             NSLog(@"execution time: %f", time);
             if (updatedPose.size() != 0) {
+                missedFrames = 0;
                 // update pose
                 NSLog(@"Proposed pose R: [%f %f %f; %f %f %f; %f %f %f]", updatedPose[0], updatedPose[1], updatedPose[2],
                 updatedPose[3], updatedPose[4], updatedPose[5],
@@ -348,7 +359,8 @@ using namespace std;
                 _transformPose = GLKMatrix4MakeAndTranspose(updatedPose[0], updatedPose[1], updatedPose[2], updatedPose[9], updatedPose[3], updatedPose[4], updatedPose[5], updatedPose[10], updatedPose[6], updatedPose[7], updatedPose[8], updatedPose[11], 0.0, 0.0, 0.0, 1.0);
                 
             } else {
-                _transformPose = GLKMatrix4Make(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+                //_transformPose = GLKMatrix4Make(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+                missedFrames += 1;
             }
         }
     }
@@ -373,8 +385,10 @@ using namespace std;
     
     // ModelView Matrix
 //    NSLog(@"center: %f %f %f %f", _centerPose.m30, _centerPose.m31, _centerPose.m32, _centerPose.m33);
+    
     GLKMatrix4 modelViewMatrix = _centerPose; // fixed to center currently
-    modelViewMatrix = GLKMatrix4Scale(modelViewMatrix, 0.75, 0.75, 0.75);
+    
+    modelViewMatrix = GLKMatrix4Scale(modelViewMatrix, 0.5, 0.5, 0.5);
 
     GLKMatrix4 rotX = GLKMatrix4Make(1, 0, 0, 0,
                                      0, -1, 0, 0,
@@ -386,6 +400,7 @@ using namespace std;
                                           rotation_t.m10, rotation_t.m11, rotation_t.m12, 0,
                                           rotation_t.m20, rotation_t.m21, rotation_t.m22, 0,
                                           _transformPose.m30, _transformPose.m31, _transformPose.m32, 1);
+ 
     
 //    NSLog(@"pose est: %@", NSStringFromGLKMatrix4(_transformPose));
 //    NSLog(@"LH: %@", NSStringFromGLKMatrix4(transform));
@@ -393,7 +408,7 @@ using namespace std;
     
     modelViewMatrix = GLKMatrix4Multiply(transform, modelViewMatrix);
     modelViewMatrix = GLKMatrix4Multiply(rotX, modelViewMatrix);
-    
+     
 //    NSLog(@"result: %@", NSStringFromGLKMatrix4(modelViewMatrix));
     
     _glkBaseEff.transform.modelviewMatrix = modelViewMatrix;
