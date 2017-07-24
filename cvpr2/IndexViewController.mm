@@ -32,7 +32,7 @@
         _tEngine = new Tong_CVPR_2017(sDocString);
     }
     
-    self.view.backgroundColor = [UIColor grayColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     
     [self setUpUI];
     [self.navigationController.navigationBar setHidden:true];
@@ -47,7 +47,7 @@
     
     // Label
     UILabel *indexLabel = [[UILabel alloc] init];
-    [indexLabel setText:@"cvpr 2017"];
+    [indexLabel setText:@"CVPR 2017"];
     indexLabel.textColor = [UIColor blackColor];
     indexLabel.translatesAutoresizingMaskIntoConstraints = false;
     indexLabel.textAlignment = NSTextAlignmentCenter;
@@ -108,7 +108,7 @@
     newStartButton.translatesAutoresizingMaskIntoConstraints = false;
     newStartButton.titleLabel.textAlignment = NSTextAlignmentCenter;
     newStartButton.tintColor = [UIColor whiteColor];
-    newStartButton.backgroundColor = [UIColor blueColor];
+    newStartButton.backgroundColor = [UIColor colorWithRed:63.0/255.0 green:195.0/255.0 blue:128.0/255.0 alpha:1.0];
     
     [self.view addSubview:newStartButton];
     [newStartButton.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = true;

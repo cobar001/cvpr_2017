@@ -155,7 +155,8 @@ using namespace std;
     backButton.translatesAutoresizingMaskIntoConstraints = false;
     backButton.titleLabel.textAlignment = NSTextAlignmentCenter;
     backButton.tintColor = [UIColor whiteColor];
-    backButton.backgroundColor = [UIColor purpleColor];
+    //backButton.backgroundColor = [UIColor redColor]; 236,100,75
+    backButton.backgroundColor = [UIColor colorWithRed:236.0/255.0 green:100.0/255.0 blue:75.0/255.0 alpha:1.0];
     backButton.layer.cornerRadius = 10;
     
     [self.glkView addSubview:backButton];
