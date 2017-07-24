@@ -328,7 +328,7 @@ using namespace std;
     */
     
     if (missedFrames >= 15) {
-        //return;
+        return;
     }
     
     [_glkBaseEff prepareToDraw];
