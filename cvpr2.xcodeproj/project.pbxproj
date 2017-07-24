@@ -15,7 +15,7 @@
 		F63E67101F14B1FA00E9496A /* IndexViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F63E670E1F14B1FA00E9496A /* IndexViewController.mm */; };
 		F63E67161F14B21400E9496A /* cube.png in Resources */ = {isa = PBXBuildFile; fileRef = F63E67141F14B21400E9496A /* cube.png */; };
 		F63E671B1F14B33900E9496A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F63E671A1F14B33900E9496A /* Default-568h@2x.png */; };
-		F66567061F25897D001A1948 /* iTongCVPR_2017.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F66567051F25897D001A1948 /* iTongCVPR_2017.a */; };
+		F66567151F259D14001A1948 /* iTongCVPR_2017.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F66567141F259D14001A1948 /* iTongCVPR_2017.a */; };
 		F6A05E491F168F3900B9BEF1 /* GyroData.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A05E401F168F3900B9BEF1 /* GyroData.m */; };
 		F6A05E4A1F168F3900B9BEF1 /* IMUMeasurement.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A05E421F168F3900B9BEF1 /* IMUMeasurement.m */; };
 		F6A05E4B1F168F3900B9BEF1 /* Interpolator.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A05E441F168F3900B9BEF1 /* Interpolator.m */; };
@@ -51,7 +51,7 @@
 		F63E670E1F14B1FA00E9496A /* IndexViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IndexViewController.mm; sourceTree = "<group>"; };
 		F63E67141F14B21400E9496A /* cube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cube.png; sourceTree = "<group>"; };
 		F63E671A1F14B33900E9496A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		F66567051F25897D001A1948 /* iTongCVPR_2017.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = iTongCVPR_2017.a; sourceTree = "<group>"; };
+		F66567141F259D14001A1948 /* iTongCVPR_2017.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = iTongCVPR_2017.a; sourceTree = "<group>"; };
 		F6A05E3F1F168F3900B9BEF1 /* GyroData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GyroData.h; sourceTree = "<group>"; };
 		F6A05E401F168F3900B9BEF1 /* GyroData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GyroData.m; sourceTree = "<group>"; };
 		F6A05E411F168F3900B9BEF1 /* IMUMeasurement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMUMeasurement.h; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 				F6B4A6621F1AA0D3007AC8A4 /* OpenGLES.framework in Frameworks */,
 				F6B4A6601F1AA0B0007AC8A4 /* AssetsLibrary.framework in Frameworks */,
 				F6B4A65E1F1AA01F007AC8A4 /* GLKit.framework in Frameworks */,
-				F66567061F25897D001A1948 /* iTongCVPR_2017.a in Frameworks */,
+				F66567151F259D14001A1948 /* iTongCVPR_2017.a in Frameworks */,
 				F6B4A65C1F1A9FE3007AC8A4 /* AVFoundation.framework in Frameworks */,
 				F6B4A65A1F1A9FD1007AC8A4 /* CoreMotion.framework in Frameworks */,
 				F6B4A6431F19E68E007AC8A4 /* Accelerate.framework in Frameworks */,
@@ -198,7 +198,7 @@
 		F6B4A6411F19E68E007AC8A4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F66567051F25897D001A1948 /* iTongCVPR_2017.a */,
+				F66567141F259D14001A1948 /* iTongCVPR_2017.a */,
 				F6A272321F1AA2DA002C4046 /* CoreMedia.framework */,
 				F6B4A6611F1AA0D3007AC8A4 /* OpenGLES.framework */,
 				F6B4A65F1F1AA0B0007AC8A4 /* AssetsLibrary.framework */,

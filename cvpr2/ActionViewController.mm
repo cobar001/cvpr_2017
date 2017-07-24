@@ -395,18 +395,23 @@ using namespace std;
                                      0, 0, -1, 0,
                                      0, 0, 0, 1);
     
-    GLKMatrix3 rotation_t = GLKMatrix3Transpose(GLKMatrix4GetMatrix3(_transformPose));
+    //GLKMatrix3 rotation_t = GLKMatrix3Transpose(GLKMatrix4GetMatrix3(_transformPose));
+    GLKMatrix3 rotation_t = GLKMatrix3(GLKMatrix4GetMatrix3(_transformPose));
+    GLKVector3 translation = GLKVector3MultiplyScalar(GLKVector3Make(_transformPose.m30, _transformPose.m31, _transformPose.m32), 1.37);
+
     GLKMatrix4 transform = GLKMatrix4Make(rotation_t.m00, rotation_t.m01, rotation_t.m02, 0,
                                           rotation_t.m10, rotation_t.m11, rotation_t.m12, 0,
                                           rotation_t.m20, rotation_t.m21, rotation_t.m22, 0,
-                                          _transformPose.m30, _transformPose.m31, _transformPose.m32, 1);
+                                          translation.x, translation.y, translation.z, 1);
  
     
 //    NSLog(@"pose est: %@", NSStringFromGLKMatrix4(_transformPose));
 //    NSLog(@"LH: %@", NSStringFromGLKMatrix4(transform));
 //    NSLog(@"RH: %@", NSStringFromGLKMatrix4(modelViewMatrix));
     
-    modelViewMatrix = GLKMatrix4Multiply(transform, modelViewMatrix);
+    //modelViewMatrix = GLKMatrix4Multiply(transform, modelViewMatrix);
+    modelViewMatrix = GLKMatrix4Multiply(modelViewMatrix, transform);
+
     modelViewMatrix = GLKMatrix4Multiply(rotX, modelViewMatrix);
      
 //    NSLog(@"result: %@", NSStringFromGLKMatrix4(modelViewMatrix));
