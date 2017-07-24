@@ -388,7 +388,7 @@ using namespace std;
     
     GLKMatrix4 modelViewMatrix = _centerPose; // fixed to center currently
     
-    modelViewMatrix = GLKMatrix4Scale(modelViewMatrix, 0.5, 0.5, 0.5);
+    modelViewMatrix = GLKMatrix4Scale(modelViewMatrix, 0.75, 0.75, 0.75);
 
     GLKMatrix4 rotX = GLKMatrix4Make(1, 0, 0, 0,
                                      0, -1, 0, 0,
