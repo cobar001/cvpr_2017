@@ -48,8 +48,8 @@ using namespace std;
     
     //t = 7.0;
     
-    _x_scale = (7/5) * (300/508.58591);
-    _y_scale = (4.5/5) * (240/508.63043);
+    _x_scale = (7.0/5) * (508.58591/320);
+    _y_scale = (4.5/5) * (508.63043/240);
     _z_scale = 1.0;
     
     int missedFrames = 0;
